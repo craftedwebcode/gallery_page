@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0;}
+a {text-decoration: none; display: block; color: #666;}
+li {list-style: none;}
+img {border: 0;}
+
+/* header */
+.main_header {width: 960px; height: 160px; margin: 0 auto; position: relative;}
+
+.logo {position: absolute; left: 20px; top: 30px; font: 1em "Henny Penny";}
+
+.gnb {position: absolute; right: 0; top: 10px;}
+.gnb ul {overflow: hidden;}
+.gnb ul li {float: left;}
+.gnb ul li a {padding: 2px 10px; border: 1px solid #000; border-right: 0;}
+.gnb ul li a:hover {background: #000; color: #fff;}
+.gnb ul li:first-child a {border-radius: 5px 0 0 5px;}
+.gnb ul li:last-child a {border-radius: 0 5px 5px 0; border-right: 1px solid #000;}
+
+.lnb {position: absolute; right: 0; bottom: 35px;}
+.lnb ul {overflow: hidden;}
+.lnb ul li {float: left;}
+.lnb ul li a {padding: 10px 20px; border: 1px solid #000; border-right: 0;}
+.lnb ul li a:hover {background: #000; color: #fff;}
+.lnb ul li:first-child a {border-radius: 5px 0 0 5px;}
+.lnb ul li:last-child a {border-radius: 0 5px 5px 0; border-right: 1px solid #000;}
+
+/* section */
+.section_wrap {width:960px; margin: 0 auto; overflow: hidden;}
+.main_section {float: left; width: 750px;}/* article 3개 들어간 섹션 */
+.main_article {margin-bottom: 10px; padding: 20px; border: 1px solid #d1d1d1; box-sizing: border-box;}
+
+.main_aside {float: right; width: 200px;}
+.button {overflow: hidden;}
+.button label {display: block; float: left; /* 수평 정렬 */ width: 100px; height: 30px; text-align: center; line-height: 30px;/* 글자 위치 조정 */ border: 1px solid #000; box-sizing: border-box; background: #fff; color: #000; cursor: pointer;}
+
+input:nth-of-type(1):checked ~ .button > label:nth-of-type(1) {background: #000; color: #fff;}
+input:nth-of-type(2):checked ~ .button > label:nth-of-type(2) {background: #000; color: #fff;}/* 2번째 input(체크 됐을 때)의 뒤에 있는 형제 요소 중 .button이라는 클래스 아래 있는 2번째 label */
+
+.item {overflow: hidden; padding: 10px; border: 1px solid #000; border-top: none;}
+.thumb {float: left;}
+.desc {float: left; margin-left: 10px;}
+.desc strong {display: block; width: 120px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+
+/* 첫 번째 탭 */
+input:nth-of-type(1) {display: none;}
+input:nth-of-type(1) ~ div.tab_item:nth-of-type(1) {display: none;}
+input:nth-of-type(1):checked ~ div.tab_item:nth-of-type(1) {display: block;}
+
+/* 두 번째 탭 */
+div.tab_item:nth-of-type(2) strong {color: #f00;}
+input:nth-of-type(2) {display: none;}
+input:nth-of-type(2) ~ div.tab_item:nth-of-type(2) {display: none;}
+input:nth-of-type(2):checked ~ div.tab_item:nth-of-type(2) {display: block;}
+
+/* footer */
+.main_footer {width: 960px; margin: 10px auto; padding: 10px; box-sizing: border-box; border: 1px solid #000; text-align: center;}

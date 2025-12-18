@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/* 초기화 */
+* {margin: 0; padding: 0;}
+body {min-width: 760px; margin-top: 60px; margin-left: 200px;}/* 더 작아지지 않게 */
+li {list-style: none;}
+a {text-decoration: none; display: block;}/* 파란색 밑줄 없앰; 처음부터 block으로 주기 */
+
+/* header */
+.main_header {height: 60px; line-height: 60px; padding-left: 10px; border-bottom: 1px solid #000; background: #1d4088; color: #fff; position: fixed; top: 0; left: 0; right: 0;}
+
+/* gnb */
+.main_gnb {overflow: hidden; border-bottom: 1px solid #000; background: #32394a; position: fixed; left: 0; right: 0;}
+
+ul.left {float: left; overflow: hidden;}
+ul.left > li {float: left;}
+
+ul.right {float: right; overflow: hidden;}
+ul.right > li {float: left;}
+
+.main_gnb a {padding: 10px 15px; border-left: 1px solid #5f6673; border-right: 1px solid #242a37; color: #fff; font-weight: 700;}/* 위에서 이미 a태그에 block 줬음 */
+
+/* section */
+section.section_wrap {overflow: hidden;}
+nav.l_lnb {float: left; width: 200px; position: fixed; left: 0; top: 103px; bottom: 0; background: #71b1d1;}
+
+.content_wrap {float: left; width: 100%; margin-top: 43px; margin-right: -200px;}/* float:left이지만 width가 100%라서 위의 l_lnb가 200px이니까 옆에 붙일 수가 없음 -> margin-right 값을 마이너스로 주면 됨 -> 하지만 오른쪽 글이 잘림!! 오른쪽으로 쭉 글이 넘어가버림 */
+.content_wrap .content {padding-right: 200px;}
+/* 오른쪽에 글이 쭉 있을텐데 그 부분을 패딩으로(빈 공간으로) 만들고 밀어버리니까 글이 돌아옴 */
+.content article {text-align: justify;}/* 양쪽 정렬 */
+.l_lnb ul li {border-top: 1px solid #96d6f6; border-bottom: 1px solid #6298b2;}
+.l_lnb ul li a {height: 40px; line-height: 40px; padding-left: 15px;  color: #fff; font-weight: 700; transition: all 0.3s;}
+.l_lnb ul li a:hover {color: #000; transform: translateX(5px);}/* 마우스 호버 시 오른쪽으로 살짝 넘어가도록 (+부드럽게=>기본 a 태그에 줄 것) */
+
+.content {background: #fff; border-left: 1px solid #000;}
+.content article {padding: 10px;}
+
+/* footer */
+.main_footer {text-align: center; padding: 10px; border-top: 3px solid #000; padding-right: 200px;}

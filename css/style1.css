@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* reset (리셋) */
+* { margin:0; padding:0; }
+li { list-style: none; }
+a { text-decoration: none;  color: #000; }
+/* a 태그의 파란 밑줄 X, 컬러 바꿔줌 */
+
+div.list > h1 p { color: #f00; }
+div.list > h2 > p { color:blue; }
+
+/* 그룹 선택자 */
+.group h1, .group h2, .group h3 { color: #00f; }
+
+/* 순서 선택자 */
+ul.nth li:nth-child(1) { color: #f00; }
+ul.nth li:nth-child(2) { color: #f0f; }
+ul.nth li:nth-child(3) { color: #ff0; }
+ul.nth li:nth-child(4) { color: #00f; }
+
+ul.nth li:nth-child(4n) { background-color: #ff0; }
+ul.nth li:nth-child(2n+1) {
+    border:2px solid #000; }
+
+/* 같은 타입만 선택 */
+ul:nth-of-type(2) li:first-child { text-decoration: underline; }
+ul:nth-of-type(2) li:last-child {
+    text-decoration: underline; }
+/* 홀수/짝수 선택 */
+ul:nth-of-type(2) li:nth-child(odd) {
+    background-color: #0ff; }
+ul:nth-of-type(2) li:nth-child(even) {
+    background-color: #ff0; }
+
+/* 속성 선택자 */
+input[type="text"] { border:1px solid #00f; box-shadow: 2px 2px 2px #0005; }
+input[type="password"] { border:1px solid #f00; box-shadow: 2px 2px 2px #0005; border-radius: 3px; }
+
+/* 가상 선택자 */
+h1.se { border: 3px solid #00f; width: 150px; text-align: center; padding: 5px; }
+h1.se:hover { border-color: #f00; }
+
+/* 문자 선택자 */
+/* 
+p.text1::first-letter { font-size: 48px; }
+p.text1:first-line { color: #f00; }
+*/
+
+/* 가상 문자 선택자 */
+p.text1 { counter-increment: rint; }
+/* rint => 정수 */
+p.text1::before { content: counter(rint) ""; font-size: 48px; }
+p.text1::after { content: " - " attr(data-page) " page -"; color: #f00; }
+/* before, after 뒤에는 무조건 문자열이 들어와야 함 */
+
+ul.menu { display:flex; }
+ul.menu li a { font-size: 32px; display: block; padding: 0 20px;}
+ul.menu li a:after { content: "|";}
+ul.menu li:last-child a:after { content: "";}
+
+/* 반응 문자 선택자 */
+p.text1::selection { background: #000; color: #fff;}
+/* 드래그 할 때 백그라운드, 텍스트 색이 바뀜 */
+
+/* 
+p.text1::before { content: "-시작- "; font-size:32px; color: #00f; }
+p.text1::after { content: " -끝-"; font-size: 32px; color: rgb(253, 130, 228); }
+*/

@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; }
+
+article h1 { font-size: 3.75em; }
+article p { font-size: 30px; }
+article a { font-size: 15px; }
+
+/* 폰트 스타일 */
+ul.family { font-size: 40px; }
+ul.family li:nth-child(1) { font-family: "돋움"; }
+/* == ul.family li:first-child {} */
+ul.family li:nth-child(2) { font-family: "Nanum Gothic"; font-weight: 700; color: #f00; }
+ul.family li:nth-child(3) { font-family: serif; color: rgba(0,0,0,0.4);}
+/* serif 둥글둥글 = sans-serif 딱 떨어짐 */
+/* 영어는 "" 없이 써도 됨 */
+ul.family li:nth-child(4) { font-family: Monoton; color: #00000044; }
+
+p.text1, p.text2, p.text3, p.text4 { width:800px; font-size: 20px; }
+p.text1 { line-height: 40px; text-align: left; }
+p.text2 { line-height: 1.5; text-align: right; letter-spacing: 5px;}
+p.text3 { text-align: center; letter-spacing: -8px;}
+p.text4 { text-align: justify;} /* 양쪽 정렬!! */
+
+div.valign { width: 500px; height: 500px; border: 1px solid #000; margin: 0 auto; text-align: center; line-height: 500px; }

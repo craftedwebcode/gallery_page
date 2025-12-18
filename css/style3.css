@@ -1,0 +1,62 @@
+@charset "utf-8";
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul, ol, li {list-style: none;}
+a {text-decoration: none; display: block;}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* header */
+header {width: 100%; border-bottom: 1px solid #ddd;}
+header .inner {width: 1180px; height: 120px; margin: 0 auto; position: relative;}
+.inner h1 {position: absolute; left: 0; bottom: 15px;}
+.inner h1 a {font: 700 24px/1 "arial"; color: #444;}/* 24px/1 => 24px/line-height:1 */
+/* header .util */
+.inner .util {position: absolute; top: 20px; right: 30px;}
+.inner .util li {float: left;}
+.inner .util li a {font: 12px/1 "arial"; color: #999; padding: 0 10px; transition: all 0.3s;}
+.inner .util li a:hover {transform: translateY(-5px); color: #a8353a;}
+/* header #gnb */
+.inner #gnb {position: absolute; bottom: 0; right: 0;}
+.inner #gnb li {float: left;}
+.inner #gnb li a {font: 700 15px/1 "arial"; color: #555; padding: 20px 40px; transition: all 0.5s;}
+.inner #gnb li a:hover {background: #555; color: #fff; transform: translateY(-5px);}
+
+/* figure */
+figure {width: 100%; height: calc(100vh - 120px); background: #000; position: relative; overflow: hidden; padding-top: 250px;}/* calc(a - b) 연산 기호 사이 한 칸 띄우기 */
+figure video {object-fit: cover; width: 100%; height: 100%; opacity: 0.3; position: absolute; top: 0; left: 0;}
+/* figure .inner1 */
+figure .inner1 {width: 1180px; margin: 0 auto; position: relative;}
+figure .inner1 h1 {font: 400 120px/1 "arial"; color: #fff; margin-bottom: 20px;}
+figure .inner1 p {font: 400 20px/1.4 "arial"; color: #888; margin-bottom: 42px;}
+figure .inner1 a {width: 400px; height: 35px; border: 1px solid #bbb; font: bold 18px/35px "arial"; color: #fff; text-align: center; letter-spacing: 1px; transition: all 0.5s;}
+figure .inner1 a:hover {background: #fff; color: #555;}
+
+/* section(news) */
+section {width: 100%; padding: 200px 0; background: url(../img/winter.jpg) fixed no-repeat;}
+section .inner2 {width: 1180px; margin: 0 auto;}
+section .inner2 h1 {font: 700 28px/1 "arial"; color: #fff; text-shadow: 2px 2px 2px #0005; text-align: center; margin-bottom: 50px;}
+/* section .wrap */
+section .inner2 .wrap {width: 100%;}
+section .inner2 .wrap:after {content: ""; display: block; clear: both;}/* clearfix */
+section .inner2 .wrap article {width: 280px; float: left; margin-right: 20px;}
+section .inner2 .wrap article:last-child {margin-right: 0;}
+section .inner2 .wrap article h2 {margin-bottom: 10px;}
+section .inner2 .wrap article h2 a {font: 600 18px/1 "arial"; color: #fff; text-shadow: 2px 2px 2px #0005;}
+section .inner2 .wrap article p {font: 500 16px/1.1 "arial"; color: #fff; text-shadow: 2px 2px 2px #0005; text-align: justify;}
+section .inner2 .wrap article .pic {width: 100%; height: 120px; background: #333; margin-bottom: 15px; position: relative; overflow: hidden;}
+section .inner2 .wrap article .pic img {object-fit: cover; width: 100%; height: 100%; transition: all 0.5s;}
+section .inner2 .wrap article .pic img:hover {transform: scale(1.2);}
+
+/* footer */
+footer {width: 100%; background: #333; padding: 100px 0; border-top: 1px solid #888;}
+footer .inner3 {width: 1180px; margin: 0 auto;}
+/* footer .upper */
+footer .inner3 .upper {width: 100%; border-bottom: 1px solid #777; padding-bottom: 20px;}
+footer .inner3 .upper:after {content: ""; display: block; clear: both;}
+footer .inner3 .upper h1 {float: left; font: 700 24px/1 "arial"; color: #666;}
+footer .inner3 .upper ul {float: right;}
+footer .inner3 .upper ul li {float: left; margin-left: 20px;}
+footer .inner3 .upper ul li a {font: 600 14px/1 "arial"; color: #fff;}
+/* footer .lower */
+footer .inner3 .lower {width: 100%; padding-top: 20px;}
+footer .inner3 .lower address {width: 100%; font: 12px/1.3 "arial"; margin-bottom: 20px; color: #fff;}
+footer .inner3 .lower p {width: 100%; font: 12px/1.3 "arial"; color: #fbf0ce;}

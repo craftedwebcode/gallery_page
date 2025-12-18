@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'NanumGothic';
+    src: url('NanumGothic.woff2') format('woff2'),
+        url('NanumGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
